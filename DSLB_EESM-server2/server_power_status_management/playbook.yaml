@@ -1,0 +1,21 @@
+---
+- name: Manage server power state
+  hosts: kvm_host
+  become: yes
+  tasks:
+    - name: Power on the server
+      community.libvirt.virt:
+        name: "{{ target_server }}"
+        state: running
+        uri: 'qemu:///system'
+      when: power_state == 'on'
+
+    - name: Power off the server
+      community.libvirt.virt:
+        name: "{{ target_server }}"
+        state: shutdown
+        uri: 'qemu:///system'
+      when: power_state == 'off'
+
+# ansible-playbook -i DSLB_EESM/server_power_status_management/inventory.ini DSLB_EESM/server_power_status_management/playbook.yaml -e "target_server=ubuntu-guest power_state=on" -l kvm_host
+# ansible-playbook -i DSLB_EESM/server_power_status_management/inventory.ini DSLB_EESM/server_power_status_management/playbook.yaml -e "target_server=ubuntu-guest power_state=off" -l kvm_host

@@ -1,0 +1,1057 @@
+{
+  "last_updated": "2026-01-26 16:49:00",
+  "iteration": 1108,
+  "using_predictions": true,
+  "history_window_minutes": 15,
+  "max_entries": 15,
+  "paths": [
+    "leaf1-spine1-leaf2",
+    "leaf1-spine2-leaf2",
+    "leaf1-spine1-leaf3",
+    "leaf1-spine2-leaf3",
+    "leaf1-spine1-leaf6",
+    "leaf1-spine2-leaf6",
+    "leaf2-spine1-leaf3",
+    "leaf2-spine2-leaf3",
+    "leaf2-spine1-leaf6",
+    "leaf2-spine2-leaf6",
+    "leaf3-spine1-leaf6",
+    "leaf3-spine2-leaf6"
+  ],
+  "next_predictions": {
+    "timestamp": "2026-01-26 16:49:00",
+    "time": "16:49",
+    "iteration": 1108,
+    "mode": "prediction",
+    "paths": {
+      "leaf1-spine1-leaf6": {
+        "predicted_mb": 83.55
+      },
+      "leaf1-spine2-leaf6": {
+        "predicted_mb": 79.09
+      },
+      "leaf1-spine1-leaf2": {
+        "predicted_mb": 36.76
+      },
+      "leaf1-spine2-leaf2": {
+        "predicted_mb": 36.34
+      },
+      "leaf1-spine1-leaf3": {
+        "predicted_mb": 49.78
+      },
+      "leaf1-spine2-leaf3": {
+        "predicted_mb": 47.58
+      },
+      "leaf2-spine1-leaf3": {
+        "predicted_mb": 47.57
+      },
+      "leaf2-spine2-leaf3": {
+        "predicted_mb": 40.37
+      },
+      "leaf2-spine1-leaf6": {
+        "predicted_mb": 88.29
+      },
+      "leaf2-spine2-leaf6": {
+        "predicted_mb": 79.1
+      },
+      "leaf3-spine1-leaf6": {
+        "predicted_mb": 97.11
+      },
+      "leaf3-spine2-leaf6": {
+        "predicted_mb": 92.58
+      }
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-01-26 16:34:00",
+      "time": "16:34",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 50.43,
+          "actual_mb": 45.6,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 45.72,
+          "actual_mb": 35.97,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 51.36,
+          "actual_mb": 46.63,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 41.32,
+          "actual_mb": 47.65,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 96.26,
+          "actual_mb": 92.21,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 84.92,
+          "actual_mb": 83.6,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 35.48,
+          "actual_mb": 44.44,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 32.94,
+          "actual_mb": 30.03,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 92.66,
+          "actual_mb": 90.01,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 75.87,
+          "actual_mb": 65.98,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 87.67,
+          "actual_mb": 91.05,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 69.7,
+          "actual_mb": 77.66,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:35:00",
+      "time": "16:35",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 48.62,
+          "actual_mb": 41.82,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 42.3,
+          "actual_mb": 47.93,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 50.41,
+          "actual_mb": 46.37,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 45.74,
+          "actual_mb": 43.1,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 92.89,
+          "actual_mb": 88.17,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 85.16,
+          "actual_mb": 90.97,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 40.08,
+          "actual_mb": 32.21,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 29.83,
+          "actual_mb": 39.35,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 97.09,
+          "actual_mb": 74.02,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 69.6,
+          "actual_mb": 87.21,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 89.6,
+          "actual_mb": 78.56,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 72.93,
+          "actual_mb": 82.4,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:36:00",
+      "time": "16:36",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 43.46,
+          "actual_mb": 44.4,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 47.16,
+          "actual_mb": 45.16,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 47.51,
+          "actual_mb": 48.04,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 46.7,
+          "actual_mb": 38.33,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 92.57,
+          "actual_mb": 92.41,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 94.5,
+          "actual_mb": 83.52,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 37.0,
+          "actual_mb": 39.7,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 34.24,
+          "actual_mb": 33.39,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 89.41,
+          "actual_mb": 84.07,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 78.99,
+          "actual_mb": 78.58,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 86.02,
+          "actual_mb": 87.71,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 80.08,
+          "actual_mb": 71.74,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:37:00",
+      "time": "16:37",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 45.77,
+          "actual_mb": 48.51,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 50.03,
+          "actual_mb": 41.31,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 46.97,
+          "actual_mb": 51.59,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 42.77,
+          "actual_mb": 43.58,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 78.66,
+          "actual_mb": 100.08,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 89.41,
+          "actual_mb": 84.87,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 39.06,
+          "actual_mb": 31.35,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 33.97,
+          "actual_mb": 35.74,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 88.39,
+          "actual_mb": 79.83,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 80.07,
+          "actual_mb": 77.03,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 83.38,
+          "actual_mb": 82.92,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 72.02,
+          "actual_mb": 79.3,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:38:00",
+      "time": "16:38",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 48.23,
+          "actual_mb": 44.85,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 46.18,
+          "actual_mb": 49.03,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 50.12,
+          "actual_mb": 33.8,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 44.57,
+          "actual_mb": 23.25,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 91.98,
+          "actual_mb": 78.63,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 89.51,
+          "actual_mb": 72.25,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 35.86,
+          "actual_mb": 49.97,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 33.55,
+          "actual_mb": 50.39,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 89.85,
+          "actual_mb": 94.8,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 77.89,
+          "actual_mb": 99.4,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 83.63,
+          "actual_mb": 83.75,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 74.95,
+          "actual_mb": 73.62,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:39:00",
+      "time": "16:39",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 46.96,
+          "actual_mb": 50.02,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 49.33,
+          "actual_mb": 43.09,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 37.46,
+          "actual_mb": 32.06,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 35.77,
+          "actual_mb": 33.53,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 86.2,
+          "actual_mb": 82.06,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 83.98,
+          "actual_mb": 76.6,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 43.03,
+          "actual_mb": 43.46,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 39.7,
+          "actual_mb": 47.57,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 95.14,
+          "actual_mb": 93.46,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 89.45,
+          "actual_mb": 90.63,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 81.31,
+          "actual_mb": 75.5,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 74.09,
+          "actual_mb": 81.08,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:40:00",
+      "time": "16:40",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 48.53,
+          "actual_mb": 38.88,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 45.75,
+          "actual_mb": 51.77,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 32.35,
+          "actual_mb": 41.86,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 34.16,
+          "actual_mb": 39.29,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 83.73,
+          "actual_mb": 80.72,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 81.33,
+          "actual_mb": 91.04,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 43.06,
+          "actual_mb": 41.37,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 43.02,
+          "actual_mb": 37.12,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 101.54,
+          "actual_mb": 80.23,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 92.14,
+          "actual_mb": 88.87,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 78.31,
+          "actual_mb": 83.21,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 76.95,
+          "actual_mb": 76.39,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:41:00",
+      "time": "16:41",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 45.11,
+          "actual_mb": 36.15,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 52.05,
+          "actual_mb": 54.82,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 36.27,
+          "actual_mb": 40.95,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 38.43,
+          "actual_mb": 29.7,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 72.0,
+          "actual_mb": 77.07,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 93.88,
+          "actual_mb": 84.5,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 43.55,
+          "actual_mb": 39.7,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 36.72,
+          "actual_mb": 51.99,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 95.1,
+          "actual_mb": 75.82,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 90.09,
+          "actual_mb": 106.79,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 78.68,
+          "actual_mb": 80.62,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 75.37,
+          "actual_mb": 81.67,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:42:00",
+      "time": "16:42",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 41.0,
+          "actual_mb": 48.56,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 57.73,
+          "actual_mb": 34.66,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 40.65,
+          "actual_mb": 43.54,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 36.47,
+          "actual_mb": 28.29,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 73.97,
+          "actual_mb": 92.07,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 92.59,
+          "actual_mb": 62.93,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 42.19,
+          "actual_mb": 56.66,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 41.28,
+          "actual_mb": 37.67,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 85.79,
+          "actual_mb": 105.2,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 97.42,
+          "actual_mb": 72.31,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 81.17,
+          "actual_mb": 100.18,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 78.71,
+          "actual_mb": 65.94,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:43:00",
+      "time": "16:43",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 48.01,
+          "actual_mb": 45.06,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 43.66,
+          "actual_mb": 46.11,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 43.49,
+          "actual_mb": 39.36,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 32.11,
+          "actual_mb": 33.55,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 79.82,
+          "actual_mb": 84.4,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 83.82,
+          "actual_mb": 79.64,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 49.37,
+          "actual_mb": 43.3,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 38.9,
+          "actual_mb": 46.11,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 100.56,
+          "actual_mb": 88.34,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 87.69,
+          "actual_mb": 92.2,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 90.81,
+          "actual_mb": 82.64,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 70.04,
+          "actual_mb": 79.64,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:44:00",
+      "time": "16:44",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 47.28,
+          "actual_mb": 48.17,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 49.48,
+          "actual_mb": 54.97,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 44.5,
+          "actual_mb": 34.44,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 35.02,
+          "actual_mb": 44.52,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 81.75,
+          "actual_mb": 82.59,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 80.58,
+          "actual_mb": 99.48,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 47.07,
+          "actual_mb": 28.1,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 39.63,
+          "actual_mb": 39.21,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 103.73,
+          "actual_mb": 76.25,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 87.11,
+          "actual_mb": 94.16,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 88.54,
+          "actual_mb": 62.52,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 72.59,
+          "actual_mb": 83.72,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:45:00",
+      "time": "16:45",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 47.17,
+          "actual_mb": 35.51,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 55.67,
+          "actual_mb": 43.04,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 33.06,
+          "actual_mb": 36.33,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 41.59,
+          "actual_mb": 35.37,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 81.07,
+          "actual_mb": 71.82,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 104.28,
+          "actual_mb": 78.39,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 38.65,
+          "actual_mb": 46.38,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 38.84,
+          "actual_mb": 53.81,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 92.79,
+          "actual_mb": 81.87,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 93.19,
+          "actual_mb": 96.84,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 76.73,
+          "actual_mb": 82.69,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 80.15,
+          "actual_mb": 89.16,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:46:00",
+      "time": "16:46",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 42.54,
+          "actual_mb": 50.75,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 47.44,
+          "actual_mb": 35.75,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 33.77,
+          "actual_mb": 55.67,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 40.39,
+          "actual_mb": 38.55,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 75.94,
+          "actual_mb": 106.39,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 94.46,
+          "actual_mb": 74.28,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 42.66,
+          "actual_mb": 43.78,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 43.15,
+          "actual_mb": 27.4,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 82.67,
+          "actual_mb": 94.51,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 90.28,
+          "actual_mb": 63.13,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 76.95,
+          "actual_mb": 99.42,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 87.1,
+          "actual_mb": 65.92,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:47:00",
+      "time": "16:47",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 48.24,
+          "actual_mb": 30.26,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 43.45,
+          "actual_mb": 29.23,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 45.1,
+          "actual_mb": 37.07,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 39.96,
+          "actual_mb": 52.32,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 90.91,
+          "actual_mb": 67.31,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 90.3,
+          "actual_mb": 81.54,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 42.85,
+          "actual_mb": 43.44,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 33.02,
+          "actual_mb": 59.22,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 95.99,
+          "actual_mb": 73.68,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 77.76,
+          "actual_mb": 88.43,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 95.19,
+          "actual_mb": 80.49,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 75.52,
+          "actual_mb": 111.52,
+          "source": "prediction"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-26 16:48:00",
+      "time": "16:48",
+      "paths": {
+        "leaf1-spine1-leaf2": {
+          "predicted_mb": 42.03,
+          "actual_mb": 31.57,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf2": {
+          "predicted_mb": 37.82,
+          "actual_mb": 32.49,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf3": {
+          "predicted_mb": 42.82,
+          "actual_mb": 53.13,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf3": {
+          "predicted_mb": 48.05,
+          "actual_mb": 41.31,
+          "source": "prediction"
+        },
+        "leaf1-spine1-leaf6": {
+          "predicted_mb": 82.11,
+          "actual_mb": 84.68,
+          "source": "prediction"
+        },
+        "leaf1-spine2-leaf6": {
+          "predicted_mb": 80.87,
+          "actual_mb": 73.77,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf3": {
+          "predicted_mb": 44.32,
+          "actual_mb": 51.5,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf3": {
+          "predicted_mb": 41.74,
+          "actual_mb": 40.82,
+          "source": "prediction"
+        },
+        "leaf2-spine1-leaf6": {
+          "predicted_mb": 92.02,
+          "actual_mb": 83.05,
+          "source": "prediction"
+        },
+        "leaf2-spine2-leaf6": {
+          "predicted_mb": 82.4,
+          "actual_mb": 73.29,
+          "source": "prediction"
+        },
+        "leaf3-spine1-leaf6": {
+          "predicted_mb": 86.2,
+          "actual_mb": 104.61,
+          "source": "prediction"
+        },
+        "leaf3-spine2-leaf6": {
+          "predicted_mb": 99.46,
+          "actual_mb": 82.11,
+          "source": "prediction"
+        }
+      }
+    }
+  ]
+}

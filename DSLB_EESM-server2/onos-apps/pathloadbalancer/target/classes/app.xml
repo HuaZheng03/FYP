@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.pathloadbalancer" 
+     origin="Custom" 
+     version="1.0.0"
+     category="Traffic Engineering" 
+     url="http://onosproject.org"
+     title="Path Load Balancer"
+     featuresRepo="NONE"
+     features="NONE">
+    <description>Path Load Balancing Application with External Path Selection</description>
+    <artifact>org.onosproject:onos-app-pathloadbalancer:1.0.0</artifact>
+</app>

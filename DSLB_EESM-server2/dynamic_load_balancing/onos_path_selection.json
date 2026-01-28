@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "timestamp_unix": 1769417343.9738116,
+    "timestamp_utc8": "2026-01-26 16:49:00",
+    "data_period_start": "2026-01-26 16:48:00",
+    "data_period_end": "2026-01-26 16:49:00",
+    "iteration": 1108,
+    "collection_interval_seconds": 60,
+    "total_network_traffic_mb": 752.34,
+    "route_groups_computed": 12,
+    "load_balancing_mode": "prediction",
+    "using_predictions": true,
+    "description": "Path selection weights based on TCN-predicted bandwidth usage"
+  },
+  "path_selection_weights": {
+    "leaf1->leaf6": {
+      "description": "Traffic distribution ratios for leaf1->leaf6",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4863,
+          "bandwidth_cost": {
+            "bytes": 87609769.70839329,
+            "megabytes": 83.55,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5137,
+          "bandwidth_cost": {
+            "bytes": 82931102.25521123,
+            "megabytes": 79.09,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf6->leaf1": {
+      "description": "Traffic distribution ratios for leaf6->leaf1",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4863,
+          "bandwidth_cost": {
+            "bytes": 87609769.70839329,
+            "megabytes": 83.55,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5137,
+          "bandwidth_cost": {
+            "bytes": 82931102.25521123,
+            "megabytes": 79.09,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf1->leaf2": {
+      "description": "Traffic distribution ratios for leaf1->leaf2",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4971,
+          "bandwidth_cost": {
+            "bytes": 38543687.33232939,
+            "megabytes": 36.76,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5029,
+          "bandwidth_cost": {
+            "bytes": 38104565.02498184,
+            "megabytes": 36.34,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf2->leaf1": {
+      "description": "Traffic distribution ratios for leaf2->leaf1",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4971,
+          "bandwidth_cost": {
+            "bytes": 38543687.33232939,
+            "megabytes": 36.76,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5029,
+          "bandwidth_cost": {
+            "bytes": 38104565.02498184,
+            "megabytes": 36.34,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf1->leaf3": {
+      "description": "Traffic distribution ratios for leaf1->leaf3",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4887,
+          "bandwidth_cost": {
+            "bytes": 52195325.64285265,
+            "megabytes": 49.78,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5113,
+          "bandwidth_cost": {
+            "bytes": 49894702.666085266,
+            "megabytes": 47.58,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf3->leaf1": {
+      "description": "Traffic distribution ratios for leaf3->leaf1",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4887,
+          "bandwidth_cost": {
+            "bytes": 52195325.64285265,
+            "megabytes": 49.78,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5113,
+          "bandwidth_cost": {
+            "bytes": 49894702.666085266,
+            "megabytes": 47.58,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf2->leaf3": {
+      "description": "Traffic distribution ratios for leaf2->leaf3",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4591,
+          "bandwidth_cost": {
+            "bytes": 49876526.69927546,
+            "megabytes": 47.57,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5409,
+          "bandwidth_cost": {
+            "bytes": 42332131.61130922,
+            "megabytes": 40.37,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf3->leaf2": {
+      "description": "Traffic distribution ratios for leaf3->leaf2",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4591,
+          "bandwidth_cost": {
+            "bytes": 49876526.69927546,
+            "megabytes": 47.57,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5409,
+          "bandwidth_cost": {
+            "bytes": 42332131.61130922,
+            "megabytes": 40.37,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf2->leaf6": {
+      "description": "Traffic distribution ratios for leaf2->leaf6",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4725,
+          "bandwidth_cost": {
+            "bytes": 92580411.30591312,
+            "megabytes": 88.29,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5275,
+          "bandwidth_cost": {
+            "bytes": 82938784.68005188,
+            "megabytes": 79.1,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf6->leaf2": {
+      "description": "Traffic distribution ratios for leaf6->leaf2",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4725,
+          "bandwidth_cost": {
+            "bytes": 92580411.30591312,
+            "megabytes": 88.29,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5275,
+          "bandwidth_cost": {
+            "bytes": 82938784.68005188,
+            "megabytes": 79.1,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf3->leaf6": {
+      "description": "Traffic distribution ratios for leaf3->leaf6",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4881,
+          "bandwidth_cost": {
+            "bytes": 101831152.99543276,
+            "megabytes": 97.11,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5119,
+          "bandwidth_cost": {
+            "bytes": 97079733.75725333,
+            "megabytes": 92.58,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    },
+    "leaf6->leaf3": {
+      "description": "Traffic distribution ratios for leaf6->leaf3",
+      "data_source": "TCN model prediction",
+      "note": "Lower bandwidth usage = higher ratio (path receives more new flows)",
+      "path_details": {
+        "path_0": {
+          "via_spine": "spine1",
+          "selection_ratio": 0.4881,
+          "bandwidth_cost": {
+            "bytes": 101831152.99543276,
+            "megabytes": 97.11,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        },
+        "path_1": {
+          "via_spine": "spine2",
+          "selection_ratio": 0.5119,
+          "bandwidth_cost": {
+            "bytes": 97079733.75725333,
+            "megabytes": 92.58,
+            "source": "prediction",
+            "description": "Predicted bandwidth over 60s"
+          }
+        }
+      }
+    }
+  }
+}

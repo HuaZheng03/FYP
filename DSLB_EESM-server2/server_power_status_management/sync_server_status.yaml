@@ -1,0 +1,26 @@
+---
+- name: Sync Server Operational Status to Load Balancer (Server 1)
+  # This targets the kvm_host group, which contains server1-hypervisor (192.168.126.1)
+  hosts: kvm_host 
+  become: yes
+  gather_facts: no
+
+  tasks:
+    - name: 1. Ensure target directory exists on Server 1
+      ansible.builtin.file:
+        # This is the path on Server 1 where the file will be stored
+        path: /home/huazheng/DSLB_EESM/dynamic_load_balancing/
+        state: directory
+        owner: huazheng
+        group: huazheng
+        mode: '0755'
+      
+    - name: 2. Copy the current status JSON to Server 1
+      ansible.builtin.copy:
+        # local_file is passed via --extra-vars from run.py (Source file on Server 2)
+        src: "{{ local_file }}" 
+        # remote_file is passed via --extra-vars from run.py (Destination path on Server 1)
+        dest: "{{ remote_file }}" 
+        owner: huazheng
+        group: huazheng
+        mode: '0644'

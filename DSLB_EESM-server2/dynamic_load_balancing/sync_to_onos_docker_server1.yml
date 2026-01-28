@@ -1,0 +1,88 @@
+---
+- name: Sync path selection weights to ONOS Docker container on Server 1
+  hosts: servers
+  gather_facts: no
+  vars:
+    # Source file on Server 2 (where ansible runs from)
+    local_json_file: "/home/huazheng/DSLB_EESM/dynamic_load_balancing/onos_path_selection.json"
+    
+    # Temporary location on Server 1 host
+    server1_temp_path: "/tmp/onos_path_selection.json"
+    
+    # ONOS container name
+    onos_container_name: "onos"
+    
+    # Destination path inside ONOS container (Karaf 4.2.9)
+    onos_container_dest: "/root/onos/apache-karaf-4.2.9/data/onos_path_selection.json"
+  
+  tasks:
+    # ========================================================================
+    # STEP 1: Copy JSON file from Server 2 to Server 1 temporary location
+    # ========================================================================
+    - name: "Step 1/4: Copy JSON file from Server 2 to Server 1 temp location"
+      ansible.builtin.copy:
+        src: "{{ local_json_file }}"
+        dest: "{{ server1_temp_path }}"
+        mode: '0644'
+      register: copy_to_server1
+
+    - name: Display Server 2 to Server 1 copy status
+      ansible.builtin.debug:
+        msg: "✓ File copied to Server 1 temp: {{ server1_temp_path }}"
+      when: copy_to_server1.changed
+
+    # ========================================================================
+    # STEP 2: Verify ONOS container is running
+    # ========================================================================
+    - name: "Step 2/4: Check if ONOS container is running"
+      ansible.builtin.shell:
+        cmd: "docker ps --filter name={{ onos_container_name }} --format '{% raw %}{{.Names}}{% endraw %}'"
+      register: container_check
+      changed_when: false
+      failed_when: container_check.stdout == ""
+
+    - name: Display container status
+      ansible.builtin.debug:
+        msg: "✓ ONOS container '{{ onos_container_name }}' is running"
+
+    # ========================================================================
+    # STEP 3: Copy file from Server 1 host into ONOS Docker container
+    # ========================================================================
+    - name: "Step 3/4: Copy file from Server 1 host into ONOS Docker container"
+      ansible.builtin.command:
+        cmd: "docker cp {{ server1_temp_path }} {{ onos_container_name }}:{{ onos_container_dest }}"
+      register: docker_cp_result
+      changed_when: docker_cp_result.rc == 0
+
+    - name: Display docker cp status
+      ansible.builtin.debug:
+        msg: "✓ File copied into ONOS container: {{ onos_container_dest }}"
+      when: docker_cp_result.rc == 0
+
+    # ========================================================================
+    # STEP 4: Verify file exists in container
+    # ========================================================================
+    - name: "Step 4/4: Verify file exists in ONOS container"
+      ansible.builtin.command:
+        cmd: "docker exec {{ onos_container_name }} ls -lh {{ onos_container_dest }}"
+      register: verify_result
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Display file info in container
+      ansible.builtin.debug:
+        msg: 
+          - "=========================================="
+          - "✓ File successfully synced to ONOS!"
+          - "=========================================="
+          - "Container: {{ onos_container_name }}"
+          - "Path: {{ onos_container_dest }}"
+          - "Details: {{ verify_result.stdout }}"
+          - "=========================================="
+      when: verify_result.rc == 0
+
+    - name: Fail if file not found in container
+      ansible.builtin.fail:
+        msg: "✗ File verification failed in container"
+      when: verify_result.rc != 0
+

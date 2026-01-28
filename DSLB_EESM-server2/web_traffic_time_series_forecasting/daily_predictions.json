@@ -1,0 +1,40 @@
+{
+  "date": "2026-01-27",
+  "entries": [
+    {
+      "time": "07:00",
+      "predicted": 42050,
+      "actual": 43154
+    },
+    {
+      "time": "08:00",
+      "predicted": 103650,
+      "actual": 124524
+    },
+    {
+      "time": "09:00",
+      "predicted": 201640,
+      "actual": 323820
+    },
+    {
+      "time": "10:00",
+      "predicted": 310326,
+      "actual": 402668
+    },
+    {
+      "time": "11:00",
+      "predicted": 260997,
+      "actual": 322032
+    },
+    {
+      "time": "12:00",
+      "predicted": 229150,
+      "actual": 263758
+    },
+    {
+      "time": "13:00",
+      "predicted": 241717,
+      "actual": null
+    }
+  ]
+}

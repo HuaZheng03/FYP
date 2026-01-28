@@ -1,0 +1,86 @@
+{
+  "ports": {
+    "of:000072ecfb3ccb4c/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf1-port1-to-spine1"}]
+    },
+    "of:000072ecfb3ccb4c/5": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf1-port5-to-spine2"}]
+    },
+    "of:000042b1a1405d41/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf2-port1-to-spine2"}]
+    },
+    "of:000042b1a1405d41/3": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf2-port3-to-spine1"}]
+    },
+    "of:000032095cbf1043/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf3-port1-to-spine1"}]
+    },
+    "of:000032095cbf1043/2": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf3-port2-to-spine2"}]
+    },
+    "of:0000ca44716bdf4b/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf6-port1-to-spine1"}]
+    },
+    "of:0000ca44716bdf4b/2": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "leaf6-port2-to-spine2"}]
+    },
+    "of:0000d6dee87ca841/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine1-port1-to-leaf1"}]
+    },
+    "of:0000d6dee87ca841/2": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine1-port2-to-leaf6"}]
+    },
+    "of:0000d6dee87ca841/3": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine1-port3-to-leaf2"}]
+    },
+    "of:0000d6dee87ca841/4": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine1-port4-to-leaf3"}]
+    },
+    "of:00000ac352fff34c/1": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine2-port1-to-leaf1"}]
+    },
+    "of:00000ac352fff34c/2": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine2-port2-to-leaf2"}]
+    },
+    "of:00000ac352fff34c/3": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine2-port3-to-leaf3"}]
+    },
+    "of:00000ac352fff34c/4": {
+      "basic": {"portSpeed": 500},
+      "interfaces": [{"name": "spine2-port4-to-leaf6"}]
+    }
+  },
+  "links": {
+    "of:000072ecfb3ccb4c/1-of:0000d6dee87ca841/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000d6dee87ca841/1-of:000072ecfb3ccb4c/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:000072ecfb3ccb4c/5-of:00000ac352fff34c/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:00000ac352fff34c/1-of:000072ecfb3ccb4c/5": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:000042b1a1405d41/3-of:0000d6dee87ca841/3": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000d6dee87ca841/3-of:000042b1a1405d41/3": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:000042b1a1405d41/1-of:00000ac352fff34c/2": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:00000ac352fff34c/2-of:000042b1a1405d41/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:000032095cbf1043/1-of:0000d6dee87ca841/4": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000d6dee87ca841/4-of:000032095cbf1043/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:000032095cbf1043/2-of:00000ac352fff34c/3": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:00000ac352fff34c/3-of:000032095cbf1043/2": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000ca44716bdf4b/1-of:0000d6dee87ca841/2": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000d6dee87ca841/2-of:0000ca44716bdf4b/1": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:0000ca44716bdf4b/2-of:00000ac352fff34c/4": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}},
+    "of:00000ac352fff34c/4-of:0000ca44716bdf4b/2": {"basic": {"bandwidth": 500, "type": "DIRECT", "metric": 1}}
+  }
+}

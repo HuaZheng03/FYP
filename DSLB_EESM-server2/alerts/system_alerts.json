@@ -1,0 +1,1057 @@
+{
+  "alerts": [
+    {
+      "id": "80ebb346",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (241,717 requests/hour)",
+      "timestamp": "2026-01-27T13:50:24.617524+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 241717,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "f44ce5be",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-27T13:50:24.615249+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "a424f724",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-27T13:50:17.291523+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "8f896ab2",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-27T13:49:47.285337+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "ae374665",
+      "type": "info",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Started",
+      "message": "LSTM model retraining initiated - weekly validity period expired",
+      "timestamp": "2026-01-27T13:47:45.464225+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "df57c496",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (260,997 requests/hour)",
+      "timestamp": "2026-01-22T11:02:55.062735+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 260997,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "fa570f85",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-22T11:02:55.056560+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "67345c2a",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-22T11:02:47.828504+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "98f2fe8b",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-22T11:02:17.822720+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "406d1529",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-1 powered off proactively - forecast shows lower traffic demand (29,676 requests/hour)",
+      "timestamp": "2026-01-21T21:19:33.465946+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 29676,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "a8ee2b5f",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-1 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T21:19:33.459998+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "72338190",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-1 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T21:19:26.166175+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "c59fc70c",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-1 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T21:18:56.163181+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "44a9d1b3",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (29,676 requests/hour)",
+      "timestamp": "2026-01-21T21:18:53.229891+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 29676,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "fa6a5441",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T21:18:53.227882+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "ce3806a8",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T21:18:44.894419+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "7c06f708",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T21:18:14.891521+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "da849bcf",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-1 powered off proactively - forecast shows lower traffic demand (43,956 requests/hour)",
+      "timestamp": "2026-01-21T20:19:40.125953+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 43956,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "92c783e9",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-1 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T20:19:40.123296+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "e330af69",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-1 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T20:19:32.951506+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "f6abd30e",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-1 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T20:19:02.946437+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "22a702fd",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (43,956 requests/hour)",
+      "timestamp": "2026-01-21T20:19:00.060992+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 43956,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "5b36a192",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T20:19:00.056462+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "fd0e97a1",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T20:18:53.046672+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "a4808e04",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T20:18:23.041715+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "c02a00b6",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-1 powered off proactively - forecast shows lower traffic demand (128,508 requests/hour)",
+      "timestamp": "2026-01-21T18:06:39.000012+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 128508,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "37a9aa8f",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-1 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T18:06:38.995524+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "2d9e7e46",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-1 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T18:06:32.103832+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "f08be3fd",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-1 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T18:06:02.098352+08:00",
+      "server_name": "apache-vm-1",
+      "server_ip": "192.168.6.3",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "0e762751",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (159,309 requests/hour)",
+      "timestamp": "2026-01-21T17:02:50.969770+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 159309,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "eedb8fd7",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T17:02:50.965466+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "6d3961e4",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T17:02:43.017342+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "bde84a1c",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T17:02:13.013069+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "e567802f",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (188,138 requests/hour)",
+      "timestamp": "2026-01-21T15:55:58.180300+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 188138,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "6ecbd4a8",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T15:55:58.176403+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "6142f454",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T15:55:50.965001+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "3a50cfc3",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T15:55:20.960776+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "7b5bcae1",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (273,531 requests/hour)",
+      "timestamp": "2026-01-21T11:42:18.492102+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 273531,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "1ff02933",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-21T11:42:18.490632+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "eb26cb8a",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-21T11:42:11.188300+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "084a40fd",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-21T11:41:41.184353+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "e771330b",
+      "type": "success",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Complete",
+      "message": "LSTM model retrained - Accuracy: 86.4%, R\u00b2: 0.96, sMAPE: 27.2%",
+      "timestamp": "2026-01-21T11:41:36.870734+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "accuracy": "86.39863",
+        "r2_score": 0.958228588104248,
+        "smape": "27.202744"
+      }
+    },
+    {
+      "id": "67e33e4a",
+      "type": "info",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Started",
+      "message": "LSTM model retraining initiated - weekly validity period expired",
+      "timestamp": "2026-01-21T11:21:57.389567+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "0d36882d",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (286,213 requests/hour)",
+      "timestamp": "2026-01-15T11:00:49.037278+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 286213,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "c9ddc9c7",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-15T11:00:49.033950+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "0d9b3a6f",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-15T11:00:41.700652+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "076cb381",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-15T11:00:11.696965+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "51b4a444",
+      "type": "warning",
+      "category": "server_power",
+      "title": "Reactive Scale-Up",
+      "message": "apache-vm-2 powered on reactively - 5-minute average CPU: 9.0% exceeded threshold of 9.0%",
+      "timestamp": "2026-01-15T10:54:32.476941+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 9.031249999997234,
+        "avg_mem": 18.54542657598117,
+        "scaling_type": "reactive",
+        "cpu_threshold": 9,
+        "mem_threshold": 90,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "20450835",
+      "type": "warning",
+      "category": "resource_threshold",
+      "title": "High Average CPU Usage Detected",
+      "message": "Average CPU across 2 active servers at 9.0% (threshold: 9.0%) - monitoring for sustained high load",
+      "timestamp": "2026-01-15T10:54:26.443191+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 9.031249999997234,
+        "threshold": 9,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "8c9a413d",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (310,326 requests/hour)",
+      "timestamp": "2026-01-15T10:48:33.493311+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 310326,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "c47fa405",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-15T10:48:33.489812+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "3d872191",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-15T10:48:24.996657+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "86f44d35",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-15T10:47:54.993551+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "bc415da0",
+      "type": "warning",
+      "category": "server_power",
+      "title": "Reactive Scale-Up",
+      "message": "apache-vm-2 powered on reactively - 5-minute average CPU: 10.3% exceeded threshold of 9.0%",
+      "timestamp": "2026-01-14T11:27:09.207856+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 10.282165957270307,
+        "avg_mem": 18.665334764807493,
+        "scaling_type": "reactive",
+        "cpu_threshold": 9,
+        "mem_threshold": 90,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "9838da17",
+      "type": "warning",
+      "category": "resource_threshold",
+      "title": "High Average CPU Usage Detected",
+      "message": "Average CPU across 2 active servers at 10.3% (threshold: 9.0%) - monitoring for sustained high load",
+      "timestamp": "2026-01-14T11:27:01.188360+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 10.282165957270307,
+        "threshold": 9,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "b01395ae",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (293,547 requests/hour)",
+      "timestamp": "2026-01-14T11:21:25.867211+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 293547,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "d146e7da",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-14T11:21:25.864638+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "79f0fac0",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-14T11:21:18.559217+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "e9ccfcc6",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-14T11:20:48.556431+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "93f13ab9",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (331,621 requests/hour)",
+      "timestamp": "2026-01-14T10:32:28.084901+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 331621,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "b3256385",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-14T10:32:28.083844+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "40720afa",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-14T10:32:20.808601+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "5f72b676",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-14T10:31:50.806052+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "ea1e7460",
+      "type": "success",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Complete",
+      "message": "LSTM model retrained - Accuracy: 86.2%, R\u00b2: 0.96, sMAPE: 27.6%",
+      "timestamp": "2026-01-14T10:31:45.668882+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "accuracy": "86.204666",
+        "r2_score": 0.9596542716026306,
+        "smape": "27.590666"
+      }
+    },
+    {
+      "id": "4ca5944e",
+      "type": "info",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Started",
+      "message": "LSTM model retraining initiated - weekly validity period expired",
+      "timestamp": "2026-01-14T10:16:44.777470+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "9cfcd277",
+      "type": "warning",
+      "category": "server_power",
+      "title": "Reactive Scale-Up",
+      "message": "apache-vm-2 powered on reactively - 5-minute average CPU: 9.1% exceeded threshold of 9.0%",
+      "timestamp": "2026-01-08T09:30:05.536420+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 9.05625000000029,
+        "avg_mem": 18.495117671876013,
+        "scaling_type": "reactive",
+        "cpu_threshold": 9,
+        "mem_threshold": 90,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "cbb2827c",
+      "type": "warning",
+      "category": "resource_threshold",
+      "title": "High Average CPU Usage Detected",
+      "message": "Average CPU across 2 active servers at 9.1% (threshold: 9.0%) - monitoring for sustained high load",
+      "timestamp": "2026-01-08T09:29:57.526254+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 9.05625000000029,
+        "threshold": 9,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "faaf7cb9",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (274,751 requests/hour)",
+      "timestamp": "2026-01-07T11:05:49.750947+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 274751,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "6cedbdc0",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-07T11:05:49.748257+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "49d36c9b",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-07T11:05:42.514690+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "a9f8fb82",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-07T11:05:12.512657+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "81a0076b",
+      "type": "warning",
+      "category": "server_power",
+      "title": "Reactive Scale-Up",
+      "message": "apache-vm-2 powered on reactively - 5-minute average CPU: 5.1% exceeded threshold of 5.0%",
+      "timestamp": "2026-01-07T10:11:37.708028+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 5.052051497345442,
+        "avg_mem": 18.624332221980126,
+        "scaling_type": "reactive",
+        "cpu_threshold": 5,
+        "mem_threshold": 90,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "cd8dac9b",
+      "type": "warning",
+      "category": "resource_threshold",
+      "title": "High Average CPU Usage Detected",
+      "message": "Average CPU across 2 active servers at 5.1% (threshold: 5.0%) - monitoring for sustained high load",
+      "timestamp": "2026-01-07T10:11:31.704822+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "avg_cpu": 5.052051497345442,
+        "threshold": 5,
+        "num_servers": 2
+      }
+    },
+    {
+      "id": "d7d895e5",
+      "type": "success",
+      "category": "server_power",
+      "title": "Proactive Scale-Down",
+      "message": "apache-vm-2 powered off proactively - forecast shows lower traffic demand (312,390 requests/hour)",
+      "timestamp": "2026-01-07T10:04:31.827847+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {
+        "predicted_traffic": 312390,
+        "scaling_type": "proactive"
+      }
+    },
+    {
+      "id": "e9acaa09",
+      "type": "success",
+      "category": "connection_draining",
+      "title": "Server Gracefully Shutdown",
+      "message": "apache-vm-2 gracefully shutdown after connection draining",
+      "timestamp": "2026-01-07T10:04:31.826627+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "80e28f00",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Complete",
+      "message": "apache-vm-2 draining complete - server will be powered off",
+      "timestamp": "2026-01-07T10:04:24.783976+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "c3fbd683",
+      "type": "info",
+      "category": "connection_draining",
+      "title": "Connection Draining Started",
+      "message": "apache-vm-2 entering connection draining mode - excluded from load balancer",
+      "timestamp": "2026-01-07T10:03:54.782666+08:00",
+      "server_name": "apache-vm-2",
+      "server_ip": "192.168.6.4",
+      "acknowledged": false,
+      "additional_data": {}
+    },
+    {
+      "id": "c4e2635a",
+      "type": "success",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Complete",
+      "message": "LSTM model retrained - Accuracy: 85.6%, R\u00b2: 0.96, sMAPE: 28.8%",
+      "timestamp": "2026-01-07T10:03:49.670724+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {
+        "accuracy": "85.58653",
+        "r2_score": 0.9566306471824646,
+        "smape": "28.826937"
+      }
+    },
+    {
+      "id": "3fdc766d",
+      "type": "info",
+      "category": "ml_model",
+      "title": "LSTM Model Retraining Started",
+      "message": "LSTM model retraining initiated - weekly validity period expired",
+      "timestamp": "2026-01-07T09:48:59.110289+08:00",
+      "server_name": null,
+      "server_ip": null,
+      "acknowledged": false,
+      "additional_data": {}
+    }
+  ],
+  "last_cleanup": "2026-01-07T10:11:37.707882+08:00"
+}

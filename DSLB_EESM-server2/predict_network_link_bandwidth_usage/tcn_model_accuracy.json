@@ -1,0 +1,109 @@
+{
+  "average_accuracy_percentage": 99.74,
+  "average_r2_score": 0.9908,
+  "average_smape": 0.51,
+  "average_mape": 0.51,
+  "average_nrmse": 0.0069,
+  "models_count": 12,
+  "last_updated": "2026-01-04 12:52:53",
+  "accuracy_formula": "100% - (SMAPE / 2)",
+  "description": "Average accuracy percentage of TCN prediction models using SMAPE-based formula",
+  "individual_models": {
+    "leaf1-spine1-leaf2": {
+      "accuracy_percentage": 99.76,
+      "r2_score": 0.9794,
+      "smape": 0.47,
+      "mape": 0.47,
+      "nrmse": 0.0069,
+      "quality": "EXCELLENT"
+    },
+    "leaf1-spine2-leaf2": {
+      "accuracy_percentage": 99.75,
+      "r2_score": 0.9937,
+      "smape": 0.51,
+      "mape": 0.51,
+      "nrmse": 0.0068,
+      "quality": "EXCELLENT"
+    },
+    "leaf1-spine1-leaf3": {
+      "accuracy_percentage": 99.44,
+      "r2_score": 0.9978,
+      "smape": 1.11,
+      "mape": 1.12,
+      "nrmse": 0.0132,
+      "quality": "EXCELLENT"
+    },
+    "leaf1-spine2-leaf3": {
+      "accuracy_percentage": 99.7,
+      "r2_score": 0.9661,
+      "smape": 0.59,
+      "mape": 0.59,
+      "nrmse": 0.0087,
+      "quality": "EXCELLENT"
+    },
+    "leaf1-spine1-leaf6": {
+      "accuracy_percentage": 99.71,
+      "r2_score": 0.9943,
+      "smape": 0.58,
+      "mape": 0.59,
+      "nrmse": 0.009,
+      "quality": "EXCELLENT"
+    },
+    "leaf1-spine2-leaf6": {
+      "accuracy_percentage": 99.82,
+      "r2_score": 0.9984,
+      "smape": 0.37,
+      "mape": 0.37,
+      "nrmse": 0.0049,
+      "quality": "EXCELLENT"
+    },
+    "leaf2-spine1-leaf3": {
+      "accuracy_percentage": 99.82,
+      "r2_score": 0.9873,
+      "smape": 0.35,
+      "mape": 0.35,
+      "nrmse": 0.005,
+      "quality": "EXCELLENT"
+    },
+    "leaf2-spine2-leaf3": {
+      "accuracy_percentage": 99.82,
+      "r2_score": 0.9888,
+      "smape": 0.36,
+      "mape": 0.36,
+      "nrmse": 0.0051,
+      "quality": "EXCELLENT"
+    },
+    "leaf2-spine1-leaf6": {
+      "accuracy_percentage": 99.8,
+      "r2_score": 0.9981,
+      "smape": 0.4,
+      "mape": 0.4,
+      "nrmse": 0.0053,
+      "quality": "EXCELLENT"
+    },
+    "leaf2-spine2-leaf6": {
+      "accuracy_percentage": 99.82,
+      "r2_score": 0.9985,
+      "smape": 0.36,
+      "mape": 0.36,
+      "nrmse": 0.0047,
+      "quality": "EXCELLENT"
+    },
+    "leaf3-spine1-leaf6": {
+      "accuracy_percentage": 99.71,
+      "r2_score": 0.992,
+      "smape": 0.58,
+      "mape": 0.58,
+      "nrmse": 0.0075,
+      "quality": "EXCELLENT"
+    },
+    "leaf3-spine2-leaf6": {
+      "accuracy_percentage": 99.76,
+      "r2_score": 0.9947,
+      "smape": 0.48,
+      "mape": 0.48,
+      "nrmse": 0.0062,
+      "quality": "EXCELLENT"
+    }
+  }
+}
