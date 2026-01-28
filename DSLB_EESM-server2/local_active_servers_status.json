@@ -16,7 +16,7 @@
     "192.168.6.4": {
         "name": "apache-vm-2",
         "ip": "192.168.6.4",
-        "active": false,
+        "active": true,
         "draining": false,
         "healthy": true
     }
