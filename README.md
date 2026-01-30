@@ -30,20 +30,20 @@ A comprehensive Software-Defined Networking (SDN) solution implementing dynamic 
 
 This Final Year Project (FYP) implements a sophisticated SDN-based infrastructure management system that combines:
 
-- **Dynamic Server Load Balancing**: Intelligent distribution of traffic using the DWRS (Dynamic Weighted Round Robin Selection) algorithm
+- **Dynamic Server Load Balancing**: Dynamic distribution of traffic using the DWRS (Dynamic Weighted Random Selection) algorithm
 - **Predictive Scaling**: ML-powered web traffic forecasting using LSTM neural networks
 - **Energy Efficiency**: Proactive and reactive server power management based on real-time metrics and predictions
-- **Network Path Optimization**: TCN (Temporal Convolutional Network) models for predicting network link bandwidth usage
+- **Proactive Path Load Balancing**: TCN (Temporal Convolutional Network) models for predicting network link bandwidth usage for path load balancing
 - **Self-Healing Infrastructure**: Automated failure detection, health checks, and server replacement
 - **Real-time Monitoring**: Comprehensive dashboard with live telemetry, alerts, and analytics
 
 The system operates across two coordinated servers:
-- **Server 1**: Handles dynamic load balancing using NAT and iptables
-- **Server 2**: Manages server scaling, ML predictions, network path optimization, and UI dashboard
+- **Server 1**: Handles dynamic server load balancing using NAT and iptables
+- **Server 2**: Manages server scaling, ML predictions, proactive path load balancing, and UI dashboard
 
 ## ✨ Key Features
 
-### 1. **Intelligent Load Balancing**
+### 1. **Dynamic Server Load Balancing**
 - **DWRS Algorithm**: Dynamically calculates server weights based on CPU (55%) and Memory (45%) utilization
 - **Weighted Selection**: Probabilistic server selection favoring less-loaded servers
 - **Connection Draining**: Graceful 30-second connection draining before server shutdown
@@ -61,11 +61,11 @@ The system operates across two coordinated servers:
 - **Resource Thresholds**: High CPU (90%), High Memory (90%), Low CPU (3%), Low Memory (20%)
 - **Stabilization Periods**: 80-second stabilization after scale-up, 30-second draining for scale-down
 
-### 4. **Network Path Optimization**
+### 4. **Proactive Path Load Balancing**
 - **TCN Models**: Temporal Convolutional Networks predict bandwidth usage per network path
 - **Multi-Path Routing**: Intelligent path selection in spine-leaf topology
 - **ONOS Integration**: Custom Java application for SDN flow rule management
-- **Smooth Weighted Round Robin**: Deterministic path selection based on predicted congestion
+- **Smooth Weighted Round Robin**: Deterministic path selection based on predicted path bandwidth usage values
 
 ### 5. **Self-Healing Infrastructure**
 - **Health Checks**: Periodic synthetic HTTP requests to verify server functionality
@@ -115,7 +115,7 @@ The system operates across two coordinated servers:
 - **scikit-learn**: Data preprocessing (MinMaxScaler)
 - **NumPy/Pandas**: Data manipulation
 - **LSTM (Bidirectional)**: Web traffic time-series forecasting
-- **TCN (Temporal Convolutional Networks)**: Bandwidth usage prediction
+- **TCN (Temporal Convolutional Networks)**: Path Bandwidth usage prediction
 
 ## 📁 Project Structure
 
@@ -148,10 +148,12 @@ FYP/
 │   │           └── PathLoadBalancerApp.java
 │   ├── predict_network_link_bandwidth_usage/
 │   │   ├── TCN.py                     # TCN model prediction
-│   │   └── models/                    # Trained TCN models (.keras)
+│   │   └── trained_models/            # Trained TCN models (.keras, .pkl)
 │   ├── server_power_status_management/
 │   │   ├── server_power_status_management.py
-│   │   └── *.yaml                     # Ansible playbooks (power on/off/restart)
+│   │   ├── playbook.yaml              # Unified power on/off playbook
+│   │   ├── sync_server_status.yaml    # Status sync playbook
+│   │   └── inventory.ini              # Ansible inventory
 │   ├── ui/
 │   │   └── my-app/                    # Next.js dashboard
 │   │       ├── app/                   # Routes and API endpoints
@@ -167,7 +169,7 @@ FYP/
 │   │   ├── daily_predictions.py       # Prediction tracking
 │   │   └── models/                    # Trained LSTM models
 │   ├── run.py                         # Main orchestrator
-│   ├── run_pathloadbalancing.py       # Network path optimization
+│   ├── run_pathloadbalancing.py       # Network path load balancing
 │   ├── forecast_cache.json            # Hourly forecast cache
 │   └── local_active_servers_status.json # Server status
 │
@@ -205,7 +207,6 @@ cd FYP
 cd DSLB_EESM-server1
 
 # Install Python dependencies
-pip install -r requirements.txt  # (if requirements.txt exists)
 pip install prometheus-client requests
 
 # Configure iptables access
@@ -232,7 +233,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install tensorflow keras scikit-learn pandas numpy flask prometheus-client requests ansible
+pip install tensorflow keras scikit-learn pandas numpy flask prometheus-client requests ansible tcn
 
 # Configure server IPs and settings
 # Edit run.py and update:
@@ -299,11 +300,11 @@ ansible-playbook -i inventory.ini playbook.yaml -e "target_server=ubuntu-guest p
 
 **Server 2** (start first):
 ```bash
-# Terminal 1: Main orchestrator
+# Terminal 1: Main orchestrator (server scaling + LSTM predictions)
 cd DSLB_EESM-server2
 python3 run.py
 
-# Terminal 2: Path load balancing
+# Terminal 2: Network path load balancer (TCN predictions + ONOS sync)
 python3 run_pathloadbalancing.py
 
 # Terminal 3: Web dashboard
@@ -313,7 +314,7 @@ npm start
 
 **Server 1**:
 ```bash
-# Requires sudo for iptables management
+# Server-level load balancer (DWRS algorithm)
 cd DSLB_EESM-server1
 sudo python3 run.py
 ```
@@ -351,9 +352,19 @@ Hourly Web Traffic Forecast: 125000 (valid until 15:00)
 [4][ACT-SCALE] OK: System load is within sustained thresholds.
 ```
 
+**Server 2** (Path Load Balancer):
+```
+=== Ansible-Based Cumulative Link Load Balancing System ===
+[Init] ✓ TCN models loaded successfully
+[Init]   Models available for 6 routes
+[Telemetry] Collecting bandwidth over 60s
+[Prediction] Predicting path costs for leaf6->leaf1
+✓ File synced to ONOS container
+```
+
 ## ⚙️ Load Balancing Algorithms
 
-### DWRS (Dynamic Weighted Round Robin Selection)
+### DWRS (Dynamic Weighted Random Selection)
 
 The DWRS algorithm dynamically calculates server weights based on real-time resource utilization:
 
@@ -403,7 +414,9 @@ path_ratio = path_weight / sum_of_all_path_weights
 
 ## 🤖 Machine Learning Models
 
-### LSTM (Web Traffic Forecasting)
+### 1. LSTM (Web Traffic Forecasting for Server Scaling)
+
+**Purpose**: Predict hourly web traffic to enable proactive server scaling
 
 **Architecture**:
 ```python
@@ -423,23 +436,57 @@ Model: Sequential
 - **Optimizer**: Adam (learning_rate=0.001)
 - **Callbacks**: EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 
+**Use Case**:
+- Determines how many servers to power on/off based on predicted demand
+- Triggers proactive scaling decisions in `run.py`
+- Results displayed in dashboard's "ML Predictions" tab
+
 **Features**:
 - Automatic retraining when prediction error exceeds threshold
 - Forecast caching (1-hour validity)
 - Historical traffic database integration
 
-### TCN (Network Bandwidth Prediction)
+---
+
+### 2. TCN (Network Path Bandwidth Prediction for ONOS)
+
+**Purpose**: Predict bandwidth usage for each network path in spine-leaf topology to optimize path selection
 
 **Architecture**:
-- Temporal Convolutional Network with dilated convolutions
-- Separate model per network path (e.g., leaf6→leaf1 via spine0)
-- Input: Historical bandwidth measurements
-- Output: Predicted bandwidth usage
+```python
+Model: Sequential (per path)
+├─ TCN (nb_filters=64, kernel_size=3, dilations=[1, 2, 4])
+│   └─ Input shape: (10, 2)  # 10 timesteps, 2 features (smoothed value + volatility)
+└─ Dense (1, activation='linear')
+```
 
-**Features**:
-- Per-path model training
-- Real-time prediction updates
-- Integration with ONOS telemetry
+**Model Organization**:
+- **12 separate models**, one for each network path:
+  - leaf1→spine0→leaf6, leaf1→spine1→leaf6
+  - leaf2→spine0→leaf6, leaf2→spine1→leaf6
+  - leaf3→spine0→leaf6, leaf3→spine1→leaf6
+  - leaf5→spine0→leaf6, leaf5→spine1→leaf6
+  - And 4 reverse direction models (leaf6→spineX→leafY)
+
+**Training Configuration**:
+- **Input**: 10-minute historical bandwidth measurements (model-scale data)
+- **Output**: Predicted bandwidth usage in bytes for next minute
+- **Loss Function**: Mean Squared Error (MSE)
+- **Optimizer**: Adam
+- **Data Preprocessing**: Log transformation, RobustScaler, volatility calculation
+
+**Integration Workflow**:
+1. **Collection** (Server 2): `run_pathloadbalancing.py` polls ONOS REST API every 60 seconds
+2. **Prediction** (TCN.py): Each model predicts bandwidth for its specific path
+3. **Weight Calculation**: `weight = 1.0 / (predicted_bandwidth + epsilon)` (inverse relationship)
+4. **Normalization**: Convert to ratios (sum to 1.0 per route)
+5. **Distribution** (Ansible): Sync `onos_path_selection.json` to ONOS container via Docker cp
+6. **Application** (ONOS Java): PathLoadBalancer app reads JSON every 5 seconds and installs OpenFlow rules
+
+**Use Case**:
+- ONOS SDN controller uses predictions to avoid congested paths
+- Implements Smooth Weighted Round Robin for deterministic path selection
+- Results displayed in dashboard's "Network" topology visualization
 
 ## 📊 Monitoring & Visualization
 
@@ -482,41 +529,6 @@ Model: Sequential
    - ONOS Connection Failed
    - Status Sync Success/Failed
 
-## 🔧 Configuration
-
-### Server Scaling Thresholds (run.py)
-
-```python
-# Reactive Scaling
-HIGH_CPU_THRESHOLD = 90.0         # Scale up trigger
-HIGH_MEM_THRESHOLD = 90.0
-LOW_CPU_THRESHOLD = 3.0           # Scale down trigger
-LOW_MEM_THRESHOLD = 20.0
-HIGH_LOAD_DURATION_SECONDS = 5 * 60    # 5 minutes
-LOW_LOAD_DURATION_SECONDS = 30 * 60   # 30 minutes
-
-# Proactive Scaling
-SERVER_TIERS = {
-    1: range(0, 140000),          # Tier 1: ubuntu-guest (1C/1GB)
-    2: range(140001, 420000),     # Tier 2: apache-vm-1 (2C/2GB)
-    3: range(420001, 1000000)     # Tier 3: apache-vm-2 (4C/4GB)
-}
-```
-
-### Load Balancing Weights (DWRS.py)
-
-```python
-ALPHA = 0.55  # CPU weight
-BETA = 0.45   # Memory weight
-```
-
-### Path Load Balancing Mode (run_pathloadbalancing.py)
-
-```python
-LOAD_BALANCING_MODE = "prediction"  # Options: "prediction", "realtime", "hybrid"
-COLLECTION_INTERVAL = 60            # seconds
-```
-
 ## 📚 API Documentation
 
 ### Server 2 Path Load Balancing API
@@ -530,61 +542,74 @@ COLLECTION_INTERVAL = 60            # seconds
 - Response: `{"status": "healthy"}`
 
 **GET /current_weights**
-- View current path weights
+- View current **path weights** for network routing (e.g., leaf6→leaf1 via spine0 vs spine1)
 - Response:
 ```json
 {
-  "leaf6->leaf1": {
-    "0": 0.45,
-    "1": 0.55
-  },
-  ...
+  "success": true,
+  "data": {
+    "metadata": {
+      "timestamp_utc8": "2026-01-30 14:23:45",
+      "load_balancing_mode": "prediction",
+      "using_predictions": true,
+      "description": "Path selection weights based on TCN-predicted bandwidth usage"
+    },
+    "path_selection_weights": {
+      "leaf6->leaf1": {
+        "0": 0.45,
+        "1": 0.55
+      }
+    }
+  }
 }
 ```
 
 **GET /stats**
-- Collection statistics
+- Collection statistics for network telemetry
 - Response:
 ```json
 {
-  "collection_count": 123,
-  "last_collection_time": "2026-01-30T14:23:45Z",
-  "mode": "prediction"
+  "success": true,
+  "push_stats": {
+    "total_pushes": 123,
+    "successful_pushes": 120,
+    "last_push_time": "2026-01-30T14:23:45Z"
+  },
+  "last_collection": {
+    "total_bytes": 456789012,
+    "total_mb": 435.6,
+    "devices": 7
+  }
 }
 ```
 
 **POST /force_sync**
-- Manually trigger ONOS sync
-- Response: `{"status": "synced", "timestamp": "..."}`
+- Manually trigger sync of path weights to ONOS container
+- Response: `{"success": true, "message": "Sync completed"}`
+
+---
 
 ### Web Dashboard API (Next.js)
 
 **Base URL**: `http://<server2-ip>:3000/api`
 
-**GET /api/servers**
-- Fetch server telemetry
+**GET /api/servers/telemetry**
+- Fetch server metrics (CPU, memory, RPS) for **server-level** load balancing
 
 **GET /api/servers/weights**
-- Calculate DWRS weights
+- Calculate DWRS weights for **server selection**
 
-**GET /api/network**
-- Network topology data
+**GET /api/network/topology**
+- Network topology with spine-leaf visualization and **path-level** metrics
 
-**GET /api/predictions**
-- ML forecast data
+**GET /api/predictions/traffic**
+- LSTM forecast for hourly web traffic (server scaling)
+
+**GET /api/predictions/bandwidth**
+- TCN forecast for network path bandwidth (path selection)
 
 **GET /api/alerts**
-- Active system alerts
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- Active system alerts (server scaling, health, network congestion)
 
 ## 📄 License
 
