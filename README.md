@@ -279,36 +279,18 @@ npm start
 cd DSLB_EESM-server2/server_power_status_management
 
 # Configure inventory
-# Edit inventory.ini with Server 1 SSH credentials
+# Edit inventory.ini with your KVM host (hypervisor) SSH credentials
 
-# Configure VM management
-# Edit power_on.yaml, power_off.yaml, restart_server.yaml
-# Update host patterns and VM names
+# The playbook.yaml file handles power on/off operations
+# Edit playbook.yaml if needed to:
+# - Update VM names (ubuntu-guest, apache-vm-1, apache-vm-2)
+# - Modify libvirt URI if not using qemu:///system
 
-# Test connectivity
-ansible server1 -i inventory.ini -m ping
-```
+# Test connectivity to KVM host
+ansible kvm_host -i inventory.ini -m ping
 
-### Step 5: Train ML Models (Optional)
-
-#### LSTM Model (Web Traffic)
-
-```bash
-cd web_traffic_time_series_forecasting
-
-# Ensure you have historical traffic data in database/traffic_data.db
-# Run training (modify forecast_web_traffic.py for training mode)
-python3 forecast_web_traffic.py
-```
-
-#### TCN Models (Network Bandwidth)
-
-```bash
-cd predict_network_link_bandwidth_usage
-
-# Ensure you have historical bandwidth data
-# Run training (modify TCN.py for training mode)
-python3 TCN.py
+# Manual test (optional)
+ansible-playbook -i inventory.ini playbook.yaml -e "target_server=ubuntu-guest power_state=on"
 ```
 
 ## 📖 Usage
