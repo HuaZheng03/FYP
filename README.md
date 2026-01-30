@@ -682,8 +682,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Project Author**: Hua Zheng  
-**Institution**: [Your University Name]  
+**Project Author**: Ling Hua Zheng  
+**Institution**: Universiti Malaya  
 **Academic Year**: 2025/2026  
 **GitHub**: [@HuaZheng03](https://github.com/HuaZheng03)
 
