@@ -486,7 +486,7 @@ Model: Sequential (per path)
 **Use Case**:
 - ONOS SDN controller uses predictions to avoid congested paths
 - Implements Smooth Weighted Round Robin for deterministic path selection
-- Results displayed in dashboard's "Network" topology visualization
+- Results displayed in dashboard's "ML Predictions" tab
 
 ## 📊 Monitoring & Visualization
 
