@@ -206,6 +206,10 @@ cd FYP
 ```bash
 cd DSLB_EESM-server1
 
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
 # Install Python dependencies
 pip install prometheus-client requests
 
@@ -216,9 +220,6 @@ pip install prometheus-client requests
 # Update Prometheus endpoints
 # Edit data_reception/server_telemetry.py
 # Update PROMETHEUS_URL and server IPs
-
-# Run the load balancer (requires sudo)
-sudo python3 run.py
 ```
 
 ### Step 3: Server 2 Setup (Control Plane)
@@ -228,7 +229,7 @@ sudo python3 run.py
 ```bash
 cd DSLB_EESM-server2
 
-# Create virtual environment (recommended)
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
@@ -298,7 +299,14 @@ ansible-playbook -i inventory.ini playbook.yaml -e "target_server=ubuntu-guest p
 
 ### Starting the System
 
-**Server 2** (start first):
+**Server 1**:
+```bash
+# Server-level load balancer (DWRS algorithm)
+cd DSLB_EESM-server1
+sudo python3 run.py
+```
+
+**Server 2**:
 ```bash
 # Terminal 1: Main orchestrator (server scaling + LSTM predictions)
 cd DSLB_EESM-server2
@@ -310,13 +318,6 @@ python3 run_pathloadbalancing.py
 # Terminal 3: Web dashboard
 cd ui/my-app
 npm start
-```
-
-**Server 1**:
-```bash
-# Server-level load balancer (DWRS algorithm)
-cd DSLB_EESM-server1
-sudo python3 run.py
 ```
 
 ### Accessing the Dashboard
